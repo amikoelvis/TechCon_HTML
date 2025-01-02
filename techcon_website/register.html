@@ -10,7 +10,7 @@
         <h1>Register for TechCon 2024</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -19,19 +19,30 @@
     </header>
     <main>
         <form action="/submit-form" method="post">
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" placeholder="e.g Amiko Elvis">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p>
+                    <label for="fullname">Full Name:</label> 
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g Amiko Elvis" required autocomplete="on">
+                </p>
+                <p>
+                    <label for="email">Email:</label> 
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="on">
+                </p>
+                <p>
+                    <label for="password">Password</label> 
+                    <input type="password" id="password" name="password" required>
+                </p>
+            </fieldset>
+            <br>
             <fieldset>
                 <legend>Terms and Conditions</legend>
-                <label for="agree">Agree</label>
-                <input type="checkbox" name="terms" id="agree" value="agree">
-                <label for="disagree">Disagree</label>
-                <input type="checkbox" name="terms" id="disagree" value="disagree">
+                <p>
+                    <input type="checkbox" name="terms" id="agree" value="agree">
+                    <label for="agree">Agree</label>
+                </p>
             </fieldset>
+            <br>
             <button type="submit">Register Now</button>
         </form>
     </main>
